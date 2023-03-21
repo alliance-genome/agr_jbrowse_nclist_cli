@@ -53,3 +53,9 @@ Example command:
 ```
 node dist/index.js -b "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS286/c_elegans_PRJNA13758/" -t "tracks/Curated_Genes/{refseq}/trackData.jsonz" -s 5692675 -e 5692315 -r III
 ```
+
+# Install with NPM
+
+```bash
+npm i jbrowse-nclist-cli -g
+```
