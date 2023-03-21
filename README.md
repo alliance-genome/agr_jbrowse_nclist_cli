@@ -18,7 +18,7 @@ Options:
   -r, --refseq <value>    The Sequence name
   -s, --start <integer>   start position
   -e, --end <integer>     end position
-  -v, --verbose           For debugigng purposes
+  -v, --verbose           For debuging purposes
   -h, --help              display help for command
 ```
 
