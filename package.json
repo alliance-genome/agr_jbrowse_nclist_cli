@@ -1,25 +1,23 @@
 {
   "name": "jbrowse-nclist-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This CLI gets the genes with in a location range from JBrowse",
+  "main": "dist/index.js",
   "scripts": {
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["JBrowse", "NCList"],
+  "author": "Adam Wright",
   "license": "MIT",
   "dependencies": {
     "@gmod/nclist": "^0.2.2",
     "@types/figlet": "^1.5.5",
     "@types/node-fetch": "^2.6.2",
     "commander": "^10.0.0",
-    "debugbreak": "^0.9.2",
     "figlet": "^1.5.2",
     "generic-filehandle": "^3.0.1",
-    "node-fetch": "^2.6.8",
-    "tsimportlib": "^0.0.3"
+    "node-fetch": "^2.6.8"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
