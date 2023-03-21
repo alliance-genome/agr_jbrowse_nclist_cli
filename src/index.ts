@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import {Fetcher} from "generic-filehandle"
 import { Command } from "commander";
 import { InvalidArgumentError } from "commander"
