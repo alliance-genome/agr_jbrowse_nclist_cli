@@ -21,3 +21,35 @@ Options:
   -v, --verbose           For debugigng purposes
   -h, --help              display help for command
 ```
+
+Requirements:
+- node
+
+
+## Install node_modules
+
+get the node_module dependencies
+
+``` bash
+npm install
+```
+
+## Compile CLI
+
+create dist/index.js file to be run by node
+
+```bash
+npx tsc
+```
+
+## Run the tool
+
+```bash
+node dist/index.js --help
+```
+
+
+Example command: 
+```
+node dist/index.js -b "https://s3.amazonaws.com/agrjbrowse/MOD-jbrowses/WormBase/WS286/c_elegans_PRJNA13758/" -t "tracks/Curated_Genes/{refseq}/trackData.jsonz" -s 5692675 -e 5692315 -r III
+```
