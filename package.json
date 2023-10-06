@@ -1,6 +1,6 @@
 {
   "name": "jbrowse-nclist-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This CLI gets the genes with in a location range from JBrowse",
   "main": "dist/index.js",
   "scripts": {

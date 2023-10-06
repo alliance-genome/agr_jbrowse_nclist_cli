@@ -29,6 +29,9 @@ program
   .requiredOption("-r, --refseq <value>", "The Sequence name")
   .requiredOption("-s, --start <integer>", "start position", ParseInt)
   .requiredOption("-e, --end <integer>", "end position", ParseInt)
+  .option("-d, --displayname [string]", "jbrowse displayname fields", "alias")
+  .option("-i, --seqid [string]", "the sequence name for the location of the features", "seq_id")
+  .option("-n, --idname [string]", "the sequence identifier of the features", "name")
   .option("-v, --verbose", "For debugigng purposes")
   .parse(process.argv);
 
@@ -39,12 +42,15 @@ if (options.verbose) {
   console.log(options)
 }
 
+
+// scott says make alias and name configurable
 function encodeGene(feature: any) {
-  var display_name: string = (Array.isArray(feature.get('alias')))? feature.get('alias')[0] : feature.get('alias');
+  var display_name: string = (Array.isArray(feature.get(options.displayname)))? feature.get(options.displayname)[0] : feature.get(options.displayname);
+  var id_name: string = (Array.isArray(feature.get(options.idname)))? feature.get(options.idname)[0] : feature.get(options.idname);
   return {
-    location: `${feature.get('seq_id')}:${feature.get('start')}-${feature.get('end')}`,
+    location: `${feature.get(options.seqid)}:${feature.get('start')}-${feature.get('end')}`,
     display_name: display_name,
-    id: feature.get('name')
+    id: id_name
   };
 }
 
